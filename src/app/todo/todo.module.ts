@@ -6,10 +6,10 @@ import { FormsModule } from "@angular/forms";
 
 
 @NgModule({
-  declarations: [TodoComponent, WeekTodoComponent],
-  imports: [
-    TodoRoutingModule,
-    FormsModule
-  ],
+    imports: [
+        TodoRoutingModule,
+        FormsModule,
+        TodoComponent, WeekTodoComponent
+    ],
 })
 export class TodoModule {}

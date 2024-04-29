@@ -12,16 +12,13 @@ import { DetailsComponent } from "./details/details.component";
 import { CvRoutingModule } from "./cv.routing";
 
 @NgModule({
-  declarations: [
-    CvComponent,
-    ItemComponent,
-    ListComponent,
-    DetailCardComponent,
-    DefaultImagePipe,
-    EmbaucheComponent,
-    AddCvComponent,
-    DetailsComponent,
-  ],
-  imports: [CommonModule, FormsModule, CvRoutingModule],
+    imports: [CommonModule, FormsModule, CvComponent,
+        ItemComponent,
+        ListComponent,
+        DetailCardComponent,
+        DefaultImagePipe,
+        EmbaucheComponent,
+        AddCvComponent,
+        DetailsComponent],
 })
 export class CvModule {}

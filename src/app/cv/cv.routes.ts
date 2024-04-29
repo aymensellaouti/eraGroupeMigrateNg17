@@ -14,11 +14,3 @@ export const CV_ROUTES: Routes = [
   },
   { path: ':id', component: DetailsComponent },
 ];
-
-@NgModule({
-  imports: [
-    RouterModule.forChild(CV_ROUTES),
-  ],
-  exports: [RouterModule],
-})
-export class CvRoutingModule {}
