@@ -14,7 +14,7 @@ export const appRoutes: Routes = [
     path: APP_ROUTES.cv,
     loadChildren: () => import('./cv/cv.routes').then((m) => m.CV_ROUTES),
     data: {
-      preload: true,
+      preload: false,
     },
   },
   {

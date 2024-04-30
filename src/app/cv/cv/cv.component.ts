@@ -8,6 +8,7 @@ import { Observable, catchError, distinctUntilChanged, of } from "rxjs";
 import { EmbaucheComponent } from "../embauche/embauche.component";
 import { DetailCardComponent } from "../detail-card/detail-card.component";
 import { ListComponent } from "../list/list.component";
+import { HugeComponent } from "../../defer/huge/huge.component";
 registerLocaleData(localeFr, "fr");
 @Component({
     selector: "app-cv",
@@ -15,13 +16,14 @@ registerLocaleData(localeFr, "fr");
     styleUrls: ["./cv.component.css"],
     standalone: true,
     imports: [
-    ListComponent,
-    DetailCardComponent,
-    EmbaucheComponent,
-    AsyncPipe,
-    TitleCasePipe,
-    DatePipe
-],
+        ListComponent,
+        DetailCardComponent,
+        EmbaucheComponent,
+        AsyncPipe,
+        TitleCasePipe,
+        DatePipe,
+        HugeComponent
+    ]
 })
 export class CvComponent {
   today = new Date();

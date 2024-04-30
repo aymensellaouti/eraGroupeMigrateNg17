@@ -12,7 +12,7 @@ import { HugeComponent } from "./defer/huge/huge.component";
     templateUrl: "./app.component.html",
     styleUrl: "./app.component.css",
     standalone: true,
-    imports: [NavbarComponent, RouterOutlet, PremierExempleComponent, ChangeDetectionComponent, FormsModule, IsEvenComponent, HugeComponent]
+    imports: [NavbarComponent, RouterOutlet, PremierExempleComponent, ChangeDetectionComponent, FormsModule, IsEvenComponent]
 })
 export class AppComponent {
   title = "ng17ModuleToConvert";
