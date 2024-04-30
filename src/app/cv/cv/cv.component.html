@@ -5,6 +5,6 @@
       Les cvs ont élé sélctionné {{nbre}} fois;
     </div>
     <app-list [cvs]="cvs"/></div>
-  <div class="col"><app-detail-card [cv]="selectedCv"/></div>
+  <div class="col"><app-detail-card [cv]="$selectedCv()"/></div>
 </div>
 <app-embauche/>
