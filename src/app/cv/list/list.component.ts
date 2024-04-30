@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output } from "@angular/core";
 import { Cv } from "../model/cv";
 import { ItemComponent } from "../item/item.component";
-import { NgFor, NgClass } from "@angular/common";
+import { NgClass } from "@angular/common";
 
 @Component({
     selector: "app-list",
@@ -9,10 +9,9 @@ import { NgFor, NgClass } from "@angular/common";
     styleUrls: ["./list.component.css"],
     standalone: true,
     imports: [
-        NgFor,
-        NgClass,
-        ItemComponent,
-    ],
+    NgClass,
+    ItemComponent
+],
 })
 export class ListComponent {
   @Input()

@@ -1,10 +1,12 @@
 <div class="row">
   <div class="col-12">
     <ol class="list-group">
-      <li *ngFor="let todo of todos" class="list-group-item">
-        {{todo.name}} : {{todo.content}}
-        <i class="bi bi-trash" (click)="deleteTodo(todo)"></i>
-      </li>
+      @for (todo of todos; track todo) {
+        <li class="list-group-item">
+          {{todo.name}} : {{todo.content}}
+          <i class="bi bi-trash" (click)="deleteTodo(todo)"></i>
+        </li>
+      }
     </ol>
   </div>
   <div class="col-12">
@@ -13,9 +15,9 @@
     <button
       [disabled]="!todo.name.trim() || !todo.content.trim()"
       (click)="addTodo()"
-      class="btn btn-primary m-2">add</button>
+    class="btn btn-primary m-2">add</button>
   </div>
 </div>
 <!-- <div class="alert alert-danger">
-  <app-cv/>
+<app-cv/>
 </div> -->

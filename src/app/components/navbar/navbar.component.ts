@@ -1,6 +1,6 @@
 import { Component, inject } from "@angular/core";
 import { AuthService } from "../../auth/services/auth.service";
-import { NgIf } from "@angular/common";
+
 import { RouterLinkActive, RouterLink } from "@angular/router";
 
 @Component({
@@ -9,10 +9,9 @@ import { RouterLinkActive, RouterLink } from "@angular/router";
     styleUrls: ["./navbar.component.css"],
     standalone: true,
     imports: [
-        RouterLinkActive,
-        RouterLink,
-        NgIf,
-    ],
+    RouterLinkActive,
+    RouterLink
+],
 })
 export class NavbarComponent {
   authService = inject(AuthService);

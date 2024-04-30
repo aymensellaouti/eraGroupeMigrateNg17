@@ -5,7 +5,7 @@ import { ToastrService } from 'ngx-toastr';
 import { CvService } from '../service/cv.service';
 import { DefaultImagePipe } from '../pipes/default-image.pipe';
 import { RouterLink } from '@angular/router';
-import { NgIf } from '@angular/common';
+
 
 @Component({
     selector: 'app-detail-card',
@@ -13,10 +13,9 @@ import { NgIf } from '@angular/common';
     styleUrls: ['./detail-card.component.css'],
     standalone: true,
     imports: [
-        NgIf,
-        RouterLink,
-        DefaultImagePipe,
-    ],
+    RouterLink,
+    DefaultImagePipe
+],
 })
 export class DetailCardComponent {
   @Input()

@@ -3,7 +3,7 @@ import { Component, inject } from '@angular/core';
 import { Cv } from '../model/cv';
 import { EmbaucheService } from '../service/embauche.service';
 import { ItemComponent } from '../item/item.component';
-import { NgIf, NgFor } from '@angular/common';
+
 
 @Component({
     selector: 'app-embauche',
@@ -11,10 +11,8 @@ import { NgIf, NgFor } from '@angular/common';
     styleUrls: ['./embauche.component.css'],
     standalone: true,
     imports: [
-        NgIf,
-        NgFor,
-        ItemComponent,
-    ],
+    ItemComponent
+],
 })
 export class EmbaucheComponent {
   public embauchees: Cv[] = [];

@@ -8,7 +8,7 @@ import { EMPTY, Observable, catchError } from "rxjs";
 import { AuthService } from "../../auth/services/auth.service";
 import { APP_ROUTES } from "../../config/routes.config";
 import { DefaultImagePipe } from "../pipes/default-image.pipe";
-import { NgIf, AsyncPipe } from "@angular/common";
+import { AsyncPipe } from "@angular/common";
 
 @Component({
     selector: "app-details",
@@ -16,10 +16,9 @@ import { NgIf, AsyncPipe } from "@angular/common";
     styleUrls: ["./details.component.css"],
     standalone: true,
     imports: [
-        NgIf,
-        AsyncPipe,
-        DefaultImagePipe,
-    ],
+    AsyncPipe,
+    DefaultImagePipe
+],
 })
 export class DetailsComponent implements OnInit {
   cv!: Cv | null;

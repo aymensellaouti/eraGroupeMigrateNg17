@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { Todo } from '../model/todo';
 import { TodoService } from '../service/todo.service';
 import { FormsModule } from '@angular/forms';
-import { NgForOf } from '@angular/common';
+
 
 @Component({
     selector: 'app-todo',
@@ -10,7 +10,7 @@ import { NgForOf } from '@angular/common';
     styleUrls: ['./todo.component.css'],
     providers: [TodoService],
     standalone: true,
-    imports: [FormsModule, NgForOf],
+    imports: [FormsModule],
 })
 export class TodoComponent {
   // Quels mes attributs d'états ?

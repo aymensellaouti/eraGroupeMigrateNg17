@@ -9,7 +9,7 @@
       aria-controls="navbarNavAltMarkup"
       aria-expanded="false"
       aria-label="Toggle navigation"
-    >
+      >
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -21,57 +21,60 @@
           routerLinkActive="text-primary active"
           [routerLinkActiveOptions]="{ exact: true }"
           >Home</a
-        >
-        <a
-          class="nav-link"
-          [routerLink]="['cv']"
-          [routerLinkActiveOptions]="{ exact: true }"
-          routerLinkActive="text-primary active"
-          >Cv</a
-        >
-        <a
-          *ngIf="authService.isAuthenticated()"
-          class="nav-link"
-          [routerLink]="['cv/add']"
-          routerLinkActive="text-primary active"
-          >Add Cv</a
-        >
-        <a
-          class="nav-link"
-          [routerLink]="['todo']"
-          routerLinkActive="text-primary active"
-          >Todo</a
-        >
-        <a
-          class="nav-link"
-          [routerLink]="['todo/signal']"
-          routerLinkActive="text-primary active"
-          >Todo Signal</a
-        >
+          >
+          <a
+            class="nav-link"
+            [routerLink]="['cv']"
+            [routerLinkActiveOptions]="{ exact: true }"
+            routerLinkActive="text-primary active"
+            >Cv</a
+            >
+            @if (authService.isAuthenticated()) {
+              <a
+                class="nav-link"
+                [routerLink]="['cv/add']"
+                routerLinkActive="text-primary active"
+                >Add Cv</a
+                >
+              }
+              <a
+                class="nav-link"
+                [routerLink]="['todo']"
+                routerLinkActive="text-primary active"
+                >Todo</a
+                >
+                <a
+                  class="nav-link"
+                  [routerLink]="['todo/signal']"
+                  routerLinkActive="text-primary active"
+                  >Todo Signal</a
+                  >
 
-        <a
-          *ngIf="!authService.isAuthenticated()"
-          class="nav-link"
-          [routerLink]="['login']"
-          routerLinkActive="text-primary active"
-          >Login</a
-        >
-        <a
-          *ngIf="authService.isAuthenticated()"
-          class="nav-link"
-          (click)="logout()"
-          routerLinkActive="text-primary active"
-          >Logout</a
-        >
-      </div>
-    </div>
-  </div>
-</nav>
+                  @if (!authService.isAuthenticated()) {
+                    <a
+                      class="nav-link"
+                      [routerLink]="['login']"
+                      routerLinkActive="text-primary active"
+                      >Login</a
+                      >
+                    }
+                    @if (authService.isAuthenticated()) {
+                      <a
+                        class="nav-link"
+                        (click)="logout()"
+                        routerLinkActive="text-primary active"
+                        >Logout</a
+                        >
+                      }
+                    </div>
+                  </div>
+                </div>
+              </nav>
 
-<!--
-  cv/edit/1
-  activer cv/edit/1
-  activer cv/edit
-  activer cv
-  activer /
--->
+              <!--
+              cv/edit/1
+              activer cv/edit/1
+              activer cv/edit
+              activer cv
+              activer /
+              -->

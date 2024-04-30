@@ -1,6 +1,6 @@
 import { Component, Signal, computed, effect, signal } from "@angular/core";
 import { Cv } from "../model/cv";
-import { registerLocaleData, NgIf, AsyncPipe, TitleCasePipe, DatePipe } from "@angular/common";
+import { registerLocaleData, AsyncPipe, TitleCasePipe, DatePipe } from "@angular/common";
 import localeFr from "@angular/common/locales/fr";
 import { ToastrService } from "ngx-toastr";
 import { CvService } from "../service/cv.service";
@@ -15,14 +15,13 @@ registerLocaleData(localeFr, "fr");
     styleUrls: ["./cv.component.css"],
     standalone: true,
     imports: [
-        NgIf,
-        ListComponent,
-        DetailCardComponent,
-        EmbaucheComponent,
-        AsyncPipe,
-        TitleCasePipe,
-        DatePipe,
-    ],
+    ListComponent,
+    DetailCardComponent,
+    EmbaucheComponent,
+    AsyncPipe,
+    TitleCasePipe,
+    DatePipe
+],
 })
 export class CvComponent {
   today = new Date();
