@@ -5,13 +5,14 @@ import { PremierExempleComponent } from "./signal/premier-exemple/premier-exempl
 import { ChangeDetectionComponent } from "./changeDetection/change-detection/change-detection.component";
 import { FormsModule } from "@angular/forms";
 import { IsEvenComponent } from "./signal/is-even/is-even.component";
+import { HugeComponent } from "./defer/huge/huge.component";
 
 @Component({
     selector: "app-root",
     templateUrl: "./app.component.html",
     styleUrl: "./app.component.css",
     standalone: true,
-    imports: [NavbarComponent, RouterOutlet, PremierExempleComponent, ChangeDetectionComponent, FormsModule, IsEvenComponent]
+    imports: [NavbarComponent, RouterOutlet, PremierExempleComponent, ChangeDetectionComponent, FormsModule, IsEvenComponent, HugeComponent]
 })
 export class AppComponent {
   title = "ng17ModuleToConvert";
