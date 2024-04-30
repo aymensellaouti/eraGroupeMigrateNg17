@@ -8,3 +8,11 @@
 
 <input type="number" [(ngModel)]="xx">
 <input type="number" [(ngModel)]="yy">
+
+<!-- Le template est le consumer -->
+<h1>Je suis {{ firstname() }}</h1>
+<h2>Je suis {{ fullname() }}</h2>
+<h3>{{ sayHello() }}</h3>
+
+<button (click)="update()">Update</button>
+<button (click)="setSignal()">Set Signal</button>
