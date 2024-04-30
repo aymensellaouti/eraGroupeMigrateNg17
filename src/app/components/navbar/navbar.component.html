@@ -42,6 +42,12 @@
           routerLinkActive="text-primary active"
           >Todo</a
         >
+        <a
+          class="nav-link"
+          [routerLink]="['todo/signal']"
+          routerLinkActive="text-primary active"
+          >Todo Signal</a
+        >
 
         <a
           *ngIf="!authService.isAuthenticated()"
